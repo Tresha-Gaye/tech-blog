@@ -5,21 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feature/Tech-Blog</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  {{!-- <link rel="stylesheet" href="/stylesheets/style.css"> --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
+  <div class="container-fluid">
+    <header class="p-3 mb-2 bg-success text-white d-flex">
       <h1>
-        <a href="/">FEATURE/TECH-BLOG</a>
+        <a class="text-white" href="/">FEATURE: the Tech Blog</a>
       </h1>
-      <nav>
+      <nav class="nav">
         {{#if loggedIn}}
-        <a href="/dashboard">DASHBOARD</a>
-        <button id="logout" class="btn-no-style">LOGOUT</button>
+        <a class="nav-link active text-white fw-bold" href="/dashboard">DASHBOARD</a>
+        <button id="logout" class="btn btn-danger">LOGOUT</button>
         {{else}}
-        <a href="/login">LOGIN</a>
+        <a class="nav-link active text-white" href="/login">LOGIN</a>
         {{/if}}
       </nav>    
      
@@ -27,7 +28,8 @@
     <main>
       {{{ body }}} <!--data that will be plugged in later-->
     </main>
-    <footer>
+    <br />
+    <footer class="border-top text-center">
       Thanks for visiting! Bring your friends next time!
     </footer>
   </div>

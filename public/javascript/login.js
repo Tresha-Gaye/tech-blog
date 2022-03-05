@@ -32,6 +32,8 @@ document.querySelector('.signup-form').addEventListener('submit', signupFormHand
 // login form handler
 
 async function loginFormHandler(event) {
+  console.log("here");
+
     event.preventDefault();
   
     const email = document.querySelector('#email-login').value.trim();

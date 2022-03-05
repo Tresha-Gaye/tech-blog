@@ -9,7 +9,7 @@ router.get('/', withAuth, (req, res) => {
   Post.findAll({
     where: {
       // use the ID from the session
-      id: req.session.user_id
+      user_id: req.session.user_id
     },
     attributes: [
       'id',
@@ -36,7 +36,7 @@ router.get('/', withAuth, (req, res) => {
     .then(dbPostData => {
       // serialize data before passing to template
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('user-homepage', { posts, loggedIn: true });
+      res.render('dashboard', { posts, loggedIn: true });
     })
     .catch(err => {
       console.log(err);

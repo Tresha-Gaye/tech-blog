@@ -75,7 +75,7 @@ router.post("/", withAuth, (req, res) => {
 });
 
 // POST ROUTE TO VALIDATE USER LOGIN
-router.post("/login", withAuth, (req, res) => {
+router.post("/login", (req, res) => {
   console.log("LOGIN")
   User.findOne({
     where: {
@@ -95,6 +95,7 @@ router.post("/login", withAuth, (req, res) => {
     }
 
     req.session.save(() => {
+      console.log("db_user", dbUserData);
       // declare session variables
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
