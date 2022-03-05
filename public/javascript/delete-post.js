@@ -1,7 +1,11 @@
 async function deleteFormHandler(event) {
     event.preventDefault();
-  
-    await fetch(`/api/posts/${id}`, {
+
+    const id = event.target.dataset.postid;
+    console.log(id);
+    console.log(event.target);
+
+    const response = await fetch(`/api/posts/${id}`, {
         method: 'DELETE'
       });
       if (response.ok) {
