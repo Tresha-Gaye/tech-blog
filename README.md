@@ -8,6 +8,9 @@ You may view the deployed application by [clicking this link](https://git.heroku
 
 ## Technologies
 - MySQL2 and Sequelize packages used to connect to the database
+- Express-sessions, connect-session-sequelize for user authentication using cookies, stored locally on user device
+- Express-Handlebars to generate the view templates
+- bcrypt for hashing passwords
 - dotenv package used for environment variables to store sensitive data
 
 ## Criteria
@@ -55,6 +58,8 @@ THEN I am able to view comments but I am prompted to log in again befo
 The application successfully connects to and seeds the database and the routes as tested in Insomnia are working as intended. 
 
 However, while the application can be viewed and interacted with locally, when it was deployed to heroku there was an H10 error. Despite several hours of troubleshooting up to this point, did not yield a result. 
+
+The application does not operate as intended, as it relates to interacting with posts and comments, as more work is needed on the front-end. This will be further developed in version 1.1.
 
 **Below are a screenshots of the app showing the functionality:**
 
