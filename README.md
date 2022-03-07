@@ -58,11 +58,11 @@ However, while the application can be viewed and interacted with locally, when i
 
 **Below are a screenshots of the app showing the functionality:**
 
-Below are images of Insomnia showing the saved GET/POST/PUT/DELETE API routes  
+Below are images of the app locally generated:  
 <br />
-![Insomnia-run-server](./assets/images/insomnia-new-prod.jpg)  
+![Homepage](./public/images/homepage.jpg)  
 <br />
-![Insomnia-run-server](./assets/images/insomnia-update-prod.jpg)  
+![Login](./public/images/login.jpg)  
 
 ## Contributing
 
