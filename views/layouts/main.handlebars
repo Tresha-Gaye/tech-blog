@@ -9,34 +9,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-  <div class="container-fluid">
-    <header class="p-3 mb-2 bg-success text-white d-flex">
-      <h1>
-        <a class="text-white" href="/">FEATURE: the Tech Blog</a>
-      </h1>
-      <nav class="nav">
-        {{#if loggedIn}}
-        <a class="nav-link active text-white fw-bold" href="/dashboard">DASHBOARD</a>
-        <button id="logout" class="btn btn-danger">LOGOUT</button>
-        {{else}}
-        <a class="nav-link active text-white" href="/login">LOGIN</a>
-        {{/if}}
-      </nav>    
-     
-    </header>
-    <main>
-      {{{ body }}} <!--data that will be plugged in later-->
-    </main>
-    <br />
-    <footer class="border-top text-center">
-      Thanks for visiting! Bring your friends next time!
-    </footer>
-  </div>
+<body class="bg-light bg-gradient">
 
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
+{{!-- header and navigation --}}
+
+<div class="container-fluid bg-secondary">
+          <nav class="nav">
+            {{#if loggedIn}}
+            <a class="nav-link active text-light mt-3" href="/dashboard">DASHBOARD</a>
+            <button id="logout" class="btn btn-primary">LOGOUT</button>
+            {{else}}
+            <a class="nav-link active text-light mt-3" href="/login">LOGIN</a>
+            {{/if}}
+        </nav>
+
+        <header class="p-3 mb-2 d-flex">
+          <h1>
+            <a class="text-light" href="/">FEATURE: the Tech Blog</span></a>
+          </h1>
+        </header>
+
+</div>
+
+        <main class="container border border-dark p-3 m-3">
+          {{{ body }}} <!--data that will be plugged in later-->
+        </main>
+
+        <br />
+        <footer class="border-top text-center pt-3">
+          Thanks for visiting! Bring your friends next time!
+        </footer>
+
+
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
 
 </body>
 

@@ -1,5 +1,16 @@
 # tech-blog
 
+## Description
+
+This application is the back-end for an e-commerce site, e-shopper, that uses a working Express.js API and configures it to use Sequelize to interact with MySQL database.
+
+You may view the deployed application by [clicking this link](https://git.heroku.com/intense-sierra-30036.git).
+
+## Technologies
+- MySQL2 and Sequelize packages used to connect to the database
+- dotenv package used for environment variables to store sensitive data
+
+## Criteria
 **User Story**
 AS A developer who writes about tech
 I WANT a CMS-style blog site
@@ -39,3 +50,34 @@ WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again befo
+
+**Accomplishments and Challenges**
+The application successfully connects to and seeds the database and the routes as tested in Insomnia are working as intended. 
+
+However, while the application can be viewed and interacted with locally, when it was deployed to heroku there was an H10 error. Despite several hours of troubleshooting up to this point, did not yield a result. 
+
+**Below are a screenshots of the app showing the functionality:**
+
+Below are images of Insomnia showing the saved GET/POST/PUT/DELETE API routes  
+<br />
+![Insomnia-run-server](./assets/images/insomnia-new-prod.jpg)  
+<br />
+![Insomnia-run-server](./assets/images/insomnia-update-prod.jpg)  
+
+## Contributing
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+
+## Credits
+
+**The following resources were used to complete this project:**
+1. UCONN Coding Bootcamp's modules on ORM/Sequelize and MVC
+2. [MySQL2](https://www.npmjs.com/package/mysql2) Documentation 
+3. [Sequelize](https://sequelize.org/v7/) Documentation 
+4. [Express-Session](https://www.npmjs.com/package/express-session) Documentation 
+5. [Express-Handlebars](https://www.npmjs.com/package/express-handlebars) Documentation
+5. [MDN Web Docs on Model-View-Controller](https://developer.mozilla.org/en-US/docs/Glossary/MVC) 
+
+## License
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
