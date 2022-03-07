@@ -171,7 +171,6 @@
     "neo-async": "^2.6.2",
     "node-addon-api": "^3.2.1",
     "node-fetch": "^2.6.7",
-    "nodemon": "^2.0.15",
     "nopt": "^5.0.0",
     "normalize-path": "^3.0.0",
     "normalize-url": "^4.5.1",
@@ -273,7 +272,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -285,5 +286,8 @@
   "bugs": {
     "url": "https://github.com/Tresha-Gaye/tech-blog/issues"
   },
-  "homepage": "https://github.com/Tresha-Gaye/tech-blog#readme"
+  "homepage": "https://github.com/Tresha-Gaye/tech-blog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

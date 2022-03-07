@@ -12,8 +12,9 @@ router.get("/", (req, res) => {
     order: [["created_at", "DESC"]], // orders by most recent post- latest posts will appear in response first
     attributes: [
       "id",
-      "post_url",
       "title",
+      "post_url",
+      "post_about",
       "created_at",
       [
         sequelize.literal(
@@ -53,8 +54,9 @@ router.get("/:id", (req, res) => {
     },
     attributes: [
       "id",
-      "post_url",
       "title",
+      "post_url",
+      "post_about",
       "created_at",
       [
         sequelize.literal(

@@ -1,9 +1,11 @@
 <article class="post">
-  <div class="title">
+  <div>
     <a href="{{post_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_url}})</span>
   </div>
-  <div class="meta">
+  <div class=" ">
+    {{post_about}}
+  </div>
+  <div>
     Posted by {{user.username}} on {{format_date created_at}}
   </div>
 </article>
