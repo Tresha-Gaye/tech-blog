@@ -5,7 +5,6 @@ const withAuth = require("../../utils/auth");
 
 // get all user posts
 router.get("/", (req, res) => {
-  console.log("======================");
   Post.findAll({
     // Query configuration
     // update the `.findAll()` method's attributes to look like this

@@ -11,7 +11,7 @@ async function loginFormHandler(event) {
 
     if (email && password) {
       const response = await fetch('/api/users/login', {
-        method: 'POST',
+        method: 'post',
         body: JSON.stringify({
           email,
           password
@@ -21,7 +21,7 @@ async function loginFormHandler(event) {
   
       if (response.ok) {
         document.location.replace('/dashboard');
-        // alert("successfully logged in")
+        alert("successfully logged in");
       } else {
         alert(response.statusText);
       }
