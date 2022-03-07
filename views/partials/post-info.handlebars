@@ -1,11 +1,14 @@
 <article class="post">
   <div>
+    <h4>
     <a href="{{post_url}}" target="_blank">{{title}}</a>
-  </div>
-  <div class=" ">
-    {{post_about}}
+    </h4>
   </div>
   <div>
-    Posted by {{user.username}} on {{format_date created_at}}
+    
+    {{post_about}}
+  </div>
+  <div class="text-end">
+    < Posted by {{user.username}} on {{format_date created_at}} >
   </div>
 </article>
