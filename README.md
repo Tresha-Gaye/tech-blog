@@ -4,7 +4,7 @@
 
 This application is the back-end for an e-commerce site, e-shopper, that uses a working Express.js API and configures it to use Sequelize to interact with MySQL database.
 
-You may view the deployed application by [clicking this link](https://git.heroku.com/intense-sierra-30036.git).
+You may view the deployed application by [clicking this link](https://git.heroku.com/sheltered-dusk-58247.git).
 
 ## Technologies
 - MySQL2 and Sequelize packages used to connect to the database
@@ -77,6 +77,8 @@ The application successfully connects to and seeds the database and the routes a
 However, while the application can be viewed and interacted with locally, when it was deployed to heroku there was an H10 error. Despite several hours of troubleshooting up to this point, did not yield a result. 
 
 The application does not operate as intended, as it relates to interacting with posts and comments, as more work is needed on the front-end. This will be further developed in version 1.1.
+
+The app doesnt deploy to Heroku, despite several attempt. The [!originally deployed app](https://git.heroku.com/intense-sierra-30036.git) was deleted in order to fix the bugs, but this did not help.
 
 **Below are a screenshots of the app showing the functionality:**
 
