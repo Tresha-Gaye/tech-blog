@@ -1,5 +1,7 @@
 async function commentFormHandler(event) {
     event.preventDefault();
+
+    console.log(event.target);
   
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
   
@@ -7,7 +9,7 @@ async function commentFormHandler(event) {
       window.location.toString().split('/').length - 1
     ];
   
-  //   console.log(comment_text, post_id);
+    console.log(comment_text, post_id);
   
   if (comment_text) {
       const response = await fetch(`/api/comments`, {
@@ -21,6 +23,7 @@ async function commentFormHandler(event) {
         }
       });
     
+      console.log(response)
       if (response.ok) {
         document.location.reload();
       } else {
@@ -29,4 +32,4 @@ async function commentFormHandler(event) {
     }
   }
   
-  document.querySelector('.comment-form').addEventListener('click', commentFormHandler);
+  document.querySelector('.comment-btn').addEventListener('click', commentFormHandler);

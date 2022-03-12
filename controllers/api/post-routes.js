@@ -136,6 +136,7 @@ router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
+      post_about: req.body.post_about,
     },
     {
       where: {

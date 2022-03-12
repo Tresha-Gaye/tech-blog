@@ -2,19 +2,19 @@
   <h2>What's New?</h2>
 
   <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+     <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="post-title" name="post-title" placeholder="Post title">
+      <label for="post-title" class="mt-2">Title</label>
     </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input type="text" id="post-url" name="post-url" />
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="post-url" name="post-url" placeholder="Post url">
+      <label for="post-url" class="mt-2">Link</label>
     </div>
-    <div>
-      <label for="post-about">Text</label>
-      <input type="text" id="post-about" name="post-about" />
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control flex-wrap" id="post-about" name="post-about" placeholder="Brief description of post">
+      <label for="post-about" class="mt-2">About</label>
     </div>
-    <button type="submit" class=" new-post-btn btn btn-primary">Create new post</button>
+    <button type="click" class="new-post-btn btn btn-primary">Create new post</button>
   </form>
 </section>
 

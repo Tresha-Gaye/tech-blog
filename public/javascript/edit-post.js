@@ -3,13 +3,15 @@ async function editFormHandler(event) {
 
     const id = event.target.dataset.postid;
     const title = document.querySelector('input[name="post-title"]').value;
+    const post_about = document.querySelector('input[name="post-about"]').value;
     console.log(id);
     console.log(event.target);
 
     const response = await fetch(`/api/posts/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-          title
+          title,
+          post_about
         }),
         headers: {
           'Content-Type': 'application/json'
