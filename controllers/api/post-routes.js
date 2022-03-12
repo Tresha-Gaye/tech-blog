@@ -95,10 +95,13 @@ router.get("/:id", (req, res) => {
 
 // use the post route and create method to create a new entry
 router.post("/", withAuth, (req, res) => {
+  console.log("in the post-routes");
+  console.log(req.body);
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
     post_url: req.body.post_url,
+    post_about: req.body.post_about,
     user_id: req.session.user_id,
   })
     .then((dbPostData) => {
