@@ -27,7 +27,7 @@ async function commentFormHandler(event) {
       if (response.ok) {
         document.location.reload();
       } else {
-        alert(response.statusText);
+        alert("Comment must be a minimum of 5 characters");
       }
     }
   }

@@ -6,11 +6,11 @@ const homeRoutes = require('./home-routes.js');
 
 const dashboardRoutes = require('./dashboard-routes.js');
 
-const postsRoutes = require("./postsRoutes.js")
+const postRoutes = require("./single-post-routes.js")
 
 router.use('/', homeRoutes);
 
-router.use('/post', postsRoutes);
+router.use('/post', postRoutes);
 
 router.use('/dashboard', dashboardRoutes);
 
