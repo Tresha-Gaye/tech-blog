@@ -4,7 +4,7 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-
+// gets and renders single post page
 router.get('/:id', withAuth, (req, res) => {
     Post.findOne({
       where: {
