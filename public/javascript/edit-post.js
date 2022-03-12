@@ -2,6 +2,7 @@ async function editFormHandler(event) {
     event.preventDefault();
 
     const id = event.target.dataset.postid;
+    const title = document.querySelector('input[name="post-title"]').value;
     console.log(id);
     console.log(event.target);
 
@@ -14,13 +15,13 @@ async function editFormHandler(event) {
           'Content-Type': 'application/json'
         }
       });
-
+    console.log(response);
       if (response.ok) {
-        document.location.reload();
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
 }
 
   
-document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
+document.querySelector('.save-post-btn').addEventListener('click', editFormHandler);

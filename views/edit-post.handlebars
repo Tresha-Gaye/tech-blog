@@ -14,7 +14,7 @@
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
     <br />
-    <button class="save-post-btn btn-primary" type="submit">Save post</button>
+    <button type="button" class="save-post-btn btn btn-primary" data-postid={{post.id}}>Save post</button>
     <button type="button" class="delete-post-btn btn btn-primary" data-postid={{post.id}} >Delete post</button>
   </form>
 </article>
@@ -27,7 +27,7 @@
   </div>
 
   <div>
-    <button class="btn btn-primary" type="submit">Add Comment</button>
+    <button class="btn btn-primary" type="button">Add Comment</button>
   </div>
 </form>
 

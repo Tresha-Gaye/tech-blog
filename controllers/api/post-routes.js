@@ -132,6 +132,7 @@ router.put("/upvote", withAuth, (req, res) => {
 
 // update user post
 router.put("/:id", withAuth, (req, res) => {
+  console.log ("in the put route")
   Post.update(
     {
       title: req.body.title,
