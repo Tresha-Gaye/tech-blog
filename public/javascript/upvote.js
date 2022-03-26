@@ -23,7 +23,8 @@ async function upvoteClickHandler(event) {
       if (response.ok) {
         document.location.reload();
       } else {
-        alert(response.statusText);
+        // alert(response.statusText);
+        alert("It looks like you already voted on this post!")
       }
 }
   

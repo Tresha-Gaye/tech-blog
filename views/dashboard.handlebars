@@ -29,10 +29,15 @@
       {{> post-info post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
+    <div>
+      Upvotes: {{ post.vote_count }}
+    </div>
     {{/each}}
   </ol>
 </section>
 {{/if}}
+
+ <a href="/login"> &larr; Back to Homepage</a> 
 
 
 <script src="/javascript/add-post.js"></script>

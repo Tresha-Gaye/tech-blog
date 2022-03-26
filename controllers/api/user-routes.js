@@ -60,14 +60,24 @@ router.get("/:id", (req, res) => {
 });
 
 // POST /api/users
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
   })
-    .then((dbUserData) => res.json(dbUserData))
+    .then((dbUserData) => {
+      req.session.save(() => {
+        console.log("db_user", dbUserData);
+        // declare session variables
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+  
+        res.json({ dbUserData, message: "You are now logged in!" });
+      })
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
